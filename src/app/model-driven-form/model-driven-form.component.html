@@ -1,0 +1,32 @@
+<form class="model-form" [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
+
+  <label class="col-2 col-form-label">firstname:</label>
+  <input class="form-control" name="firstname" formControlName="firstname">
+
+  <label class="col-2 col-form-label">Lastname:</label>
+  <input class="form-control" name="lastname" formControlName="lastname">
+
+  <button class="btn btn-primary" (click)="addPosition()">Add position</button>
+  <div formArrayName="positions"
+       *ngFor="let pos of positions.controls; let i = index"
+       class="position">
+
+    <h3>Position {{ i + 1}}</h3>
+    <button class="btn btn-danger" (click)="removePosition(i)">remove (X)</button>
+
+    <fieldset [formGroupName]="i">
+      <label attr.for="{{ 'posId' + i }}" class="col-2 col-form-label">Job:</label>
+      <input id="{{ 'posId' + i }}" class="form-control" name="job" formControlName="job">
+
+      <label class="col-2 col-form-label">Company:</label>
+      <input class="form-control" name="company" formControlName="company">
+
+      <label class="col-2 col-form-label">City:</label>
+      <input class="form-control" name="city" formControlName="city">
+    </fieldset>
+  </div>
+
+  <button class="btn btn-primary" [disabled]="!modelForm.valid" type="submit">Send</button>
+</form>
+
+<pre>{{ modelForm.value | json }}</pre>

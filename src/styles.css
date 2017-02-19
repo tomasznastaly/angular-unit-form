@@ -1,0 +1,52 @@
+.row {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+body {
+  background: #fafafa;
+}
+
+.template-form,
+.model-form {
+  padding: 15px;
+}
+
+.template-form p,
+.model-form p {
+  border: 1px solid red;
+  background: red;
+  color: white;
+  padding: 5px;
+}
+
+.template-form {
+  background: #ebebeb;
+}
+
+.card {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.child-child-child-cmp {
+  border: 1px solid grey;
+  border-radius: 3px;
+  padding: 15px;
+}
+
+.alert {
+  display: block;
+}
+
+.btn {
+  margin-top: 15px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.position {
+  margin-top: 2px;
+  border: 1px solid grey;
+  padding: 10px;
+}
