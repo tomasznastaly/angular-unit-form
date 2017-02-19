@@ -5,13 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ModelDrivenFormComponent } from './model-driven-form/model-driven-form.component';
-import { TesterComponent } from './tester/tester.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ModelDrivenFormComponent,
-    TesterComponent,
+    ModelDrivenFormComponent
   ],
   imports: [
     BrowserModule,
